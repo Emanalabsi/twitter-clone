@@ -1,11 +1,464 @@
 <!DOCTYPE html>
+<!-- saved from url=(0037)file:///D:/twitterClone-js/index.html -->
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css" />
+    <!-- <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    /> -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <!-- twitter -->
+    <!-- <svg width="16" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.355 3.24c.01.142.01.284.01.426 0 4.337-3.299 9.334-9.33 9.334A9.264 9.264 0 010 11.527c.264.03.518.041.792.041a6.566 6.566 0 004.071-1.402 3.285 3.285 0 01-3.066-2.275c.203.03.406.051.62.051.294 0 .588-.04.862-.112A3.28 3.28 0 01.65 4.61v-.04c.437.244.945.396 1.483.417A3.278 3.278 0 01.67 2.255c0-.61.162-1.168.447-1.656a9.32 9.32 0 006.761 3.433 3.705 3.705 0 01-.081-.752A3.278 3.278 0 0111.077 0a3.27 3.27 0 012.395 1.036 6.455 6.455 0 002.081-.792 3.271 3.271 0 01-1.441 1.808c.66-.072 1.3-.254 1.888-.508a7.05 7.05 0 01-1.645 1.696z" fill="currentColor"></path></svg> -->
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Twitter</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <!-- icnos bar -->
+      <div class="navigation-links">
+        <a>
+          <img
+            class="twitter-logo"
+            src="./imgs/twitter-logo.png"
+            alt="twitter-logo"
+          />
+        </a>
+        <a>
+          <i class="material-icons-outlined">home</i>
+          <span> Home </span>
+        </a>
+        <a>
+          <i class="material-icons-outlined">tag</i>
+          <span> Explore </span>
+        </a>
+        <a>
+          <i class="material-icons-outlined">notifications</i>
+          <span> Notifications </span>
+        </a>
+        <a>
+          <i class="material-icons-outlined">email</i>
+          <span> Messages </span>
+        </a>
+        <a>
+          <i class="material-icons-outlined">bookmark</i>
+          <span> Bookmarks </span>
+        </a>
+        <a>
+          <i class="material-icons-outlined">list_alt</i>
+          <span> Lists </span>
+        </a>
+        <a>
+          <i class="material-icons-outlined">person</i>
+          <span> Profile </span>
+        </a>
+        <a>
+          <i class="material-icons-outlined">more</i>
+          <span> More </span>
+        </a>
+        <button class="tweet-btn">Tweet</button>
+      </div>
+      <!-- porfile shortcut -->
+      <div class="profile-shortcut">
+        <div class="img-info">
+          <img
+            src="/imgs/SelfPortrait3.jpeg"
+            class="profile-img"
+            alt="profile-img"
+          />
+          <div class="profile-info">
+            <span class="username">Eman Alabsi</span>
+            <span class="nickname">@emanalabsi</span>
+          </div>
+        </div>
+        <a>
+          <i class="material-icons-outlined">more_horiz</i>
+        </a>
+      </div>
+    </header>
+    <!-- the tweets section -->
+    <main>
+      <div class="main-flex">
+        <div class="tweets-feed">
+          <div class="home-bar">
+            <span>Home</span>
+            <a>
+              <i class="material-icons-outlined">auto_awesome</i>
+            </a>
+          </div>
+          <div class="tweet-section">
+            <img src="/imgs/SelfPortrait3.jpeg" alt="profile-img" />
+            <div class="new-tweet">
+              <input
+                class="tweet-input"
+                type="text"
+                placeholder="What's happening?"
+              />
+              <div class="tweet-actions">
+                <ul>
+                  <li>
+                    <i class="material-icons-outlined">image</i>
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">gif_box</i>
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">poll</i>
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">sentiment_satisfied</i>
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">event</i>
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">location_on</i>
+                  </li>
+                </ul>
+                <button class="seconed-tweet-btn">Tweet</button>
+              </div>
+            </div>
+          </div>
+          <div class="tweets">
+            <div class="tweet-timeline">
+              <img
+                src="/imgs/SelfPortrait3.jpeg"
+                class="profile-img"
+                alt="profile-img"
+              />
+              <div class="tweeter-details">
+                <div class="tweeter-info">
+                  <a href="" class="tweeter-username"
+                    >Eman Alabsi
+                    <span class="tweeter-nickname">@emanalabsi . 1h</span>
+                  </a>
+                  <i class="material-icons-outlined">more_horiz</i>
+                </div>
+                <div class="tweet-text">
+                  <p class="tweet-content">Save your tears for another day</p>
+                </div>
+                <div class="tweet-icons">
+                  <a>
+                    <i class="material-icons-outlined">chat_bubble_outline</i>
+                  </a>
+                  <a class="retweet-btn">
+                    <i class="material-icons-outlined">restart_alt</i>
+                  </a>
+                  <a class="like-btn">
+                    <i class="material-icons-outlined">favorite_border</i>
+                  </a>
+                  <a>
+                    <i class="material-icons-outlined">upload</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tweet-timeline">
+              <img
+                src="/imgs/SelfPortrait3.jpeg"
+                class="profile-img"
+                alt="profile-img"
+              />
+              <div class="tweeter-details">
+                <div class="tweeter-info">
+                  <a href="" class="tweeter-username"
+                    >Eman Alabsi
+                    <span class="tweeter-nickname">@emanalabsi . 1h</span>
+                  </a>
+                  <i class="material-icons-outlined">more_horiz</i>
+                </div>
+                <div class="tweet-text">
+                  <p class="tweet-content">
+                    It's 1:16am right now. i enjoyed building this.
+                  </p>
+                </div>
+                <div class="tweet-icons">
+                  <a>
+                    <i class="material-icons-outlined">chat_bubble_outline</i>
+                  </a>
+                  <a class="retweet-btn">
+                    <i class="material-icons-outlined">restart_alt</i>
+                  </a>
+                  <a class="like-btn">
+                    <i class="material-icons-outlined">favorite_border</i>
+                  </a>
+                  <a>
+                    <i class="material-icons-outlined">upload</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tweet-timeline">
+              <img
+                src="/imgs/SelfPortrait3.jpeg"
+                class="profile-img"
+                alt="profile-img"
+              />
+              <div class="tweeter-details">
+                <div class="tweeter-info">
+                  <a href="" class="tweeter-username"
+                    >Eman Alabsi
+                    <span class="tweeter-nickname">@emanalabsi . 1h</span>
+                  </a>
+                  <i class="material-icons-outlined">more_horiz</i>
+                </div>
+                <div class="tweet-text">
+                  <p class="tweet-content">hellp it's me eman</p>
+                </div>
+                <div class="tweet-icons">
+                  <a>
+                    <i class="material-icons-outlined">chat_bubble_outline</i>
+                  </a>
+                  <a class="retweet-btn">
+                    <i class="material-icons-outlined">restart_alt</i>
+                  </a>
+                  <a class="like-btn">
+                    <i class="material-icons-outlined">favorite_border</i>
+                  </a>
+                  <a>
+                    <i class="material-icons-outlined">upload</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tweet-timeline">
+              <img
+                src="/imgs/SelfPortrait3.jpeg"
+                class="profile-img"
+                alt="profile-img"
+              />
+              <div class="tweeter-details">
+                <div class="tweeter-info">
+                  <a href="" class="tweeter-username"
+                    >Eman Alabsi
+                    <span class="tweeter-nickname">@emanalabsi . 1h</span>
+                  </a>
+                  <i class="material-icons-outlined">more_horiz</i>
+                </div>
+                <div class="tweet-text">
+                  <p class="tweet-content">
+                    There are no instant classics, but Agha Shahid Ali’s ghazal
+                    “Tonight” comes close: appearing in three versions between
+                    1997 and 2003, this version, which is the poem’s last and
+                    longest incarnation.
+                  </p>
+                </div>
+                <div class="tweet-icons">
+                  <a>
+                    <i class="material-icons-outlined">chat_bubble_outline</i>
+                  </a>
+                  <a class="retweet-btn">
+                    <i class="material-icons-outlined">restart_alt</i>
+                  </a>
+                  <a class="like-btn">
+                    <i class="material-icons-outlined">favorite_border</i>
+                  </a>
+                  <a>
+                    <i class="material-icons-outlined">upload</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tweet-timeline">
+              <img
+                src="/imgs/SelfPortrait3.jpeg"
+                class="profile-img"
+                alt="profile-img"
+              />
+              <div class="tweeter-details">
+                <div class="tweeter-info">
+                  <a href="" class="tweeter-username"
+                    >Eman Alabsi
+                    <span class="tweeter-nickname">@emanalabsi . 1h</span>
+                  </a>
+                  <i class="material-icons-outlined">more_horiz</i>
+                </div>
+                <div class="tweet-text">
+                  <p class="tweet-content">
+                    Should I bring myself a cup of tea? or just go to sleep?
+                  </p>
+                </div>
+                <div class="tweet-icons">
+                  <a>
+                    <i class="material-icons-outlined">chat_bubble_outline</i>
+                  </a>
+                  <a class="retweet-btn">
+                    <i class="material-icons-outlined">restart_alt</i>
+                  </a>
+                  <a class="like-btn">
+                    <i class="material-icons-outlined">favorite_border</i>
+                  </a>
+                  <a>
+                    <i class="material-icons-outlined">upload</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tweet-timeline">
+              <img
+                src="/imgs/SelfPortrait3.jpeg"
+                class="profile-img"
+                alt="profile-img"
+              />
+              <div class="tweeter-details">
+                <div class="tweeter-info">
+                  <a href="" class="tweeter-username"
+                    >Eman Alabsi
+                    <span class="tweeter-nickname">@emanalabsi . 1h</span>
+                  </a>
+                  <i class="material-icons-outlined">more_horiz</i>
+                </div>
+                <div class="tweet-text">
+                  <p class="tweet-content">I don't enjoy winters.</p>
+                </div>
+                <div class="tweet-icons">
+                  <a>
+                    <i class="material-icons-outlined">chat_bubble_outline</i>
+                  </a>
+                  <a class="retweet-btn">
+                    <i class="material-icons-outlined">restart_alt</i>
+                  </a>
+                  <a class="like-btn">
+                    <i class="material-icons-outlined">favorite_border</i>
+                  </a>
+                  <a>
+                    <i class="material-icons-outlined">upload</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tweet-timeline">
+              <img
+                src="/imgs/SelfPortrait3.jpeg"
+                class="profile-img"
+                alt="profile-img"
+              />
+              <div class="tweeter-details">
+                <div class="tweeter-info">
+                  <a href="" class="tweeter-username"
+                    >Eman Alabsi
+                    <span class="tweeter-nickname">@emanalabsi . 1h</span>
+                  </a>
+                  <i class="material-icons-outlined">more_horiz</i>
+                </div>
+                <div class="tweet-text">
+                  <p class="tweet-content">I don't enjoy winters.</p>
+                </div>
+                <div class="tweet-icons">
+                  <a>
+                    <i class="material-icons-outlined">chat_bubble_outline</i>
+                  </a>
+                  <a class="retweet-btn">
+                    <i class="material-icons-outlined">restart_alt</i>
+                  </a>
+                  <a class="like-btn">
+                    <i class="material-icons-outlined">favorite_border</i>
+                  </a>
+                  <a>
+                    <i class="material-icons-outlined">upload</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-feed">
+          <div class="search">
+            <input type="search" placeholder="search Twitter" />
+          </div>
+          <div class="trending">
+            <h1 class="h1-title">Trends for you</h1>
+            <div class="trending-item">
+              <div class="trending-category">
+                <span>Trending in Gaza</span>
+                <i class="material-icons-outlined">more_horiz</i>
+              </div>
+              <p>Winter is coming</p>
+              <span>2.35K</span>
+            </div>
+            <div class="trending-item">
+              <div class="trending-category">
+                <span>Trending in Gaza</span>
+                <i class="material-icons-outlined">more_horiz</i>
+              </div>
+              <p>Winter is coming</p>
+              <span>2.35K</span>
+            </div>
+            <div class="trending-item">
+              <div class="trending-category">
+                <span>Trending in Gaza</span>
+                <i class="material-icons-outlined">more_horiz</i>
+              </div>
+              <p>Winter is coming</p>
+              <span>2.35K</span>
+            </div>
+            <div class="trending-item">
+              <div class="trending-category">
+                <span>Trending in Gaza</span>
+                <i class="material-icons-outlined">more_horiz</i>
+              </div>
+              <p>Winter is coming</p>
+              <span>2.35K</span>
+            </div>
+            <div class="trending-item">
+              <div class="trending-category">
+                <span>Trending in Gaza</span>
+                <i class="material-icons-outlined">more_horiz</i>
+              </div>
+              <p>Winter is coming</p>
+              <span>2.35K</span>
+            </div>
+            <a href="" class="show-more">Show more</a>
+          </div>
+          <div class="follow">
+            <h1 class="h1-title">Who to follow?</h1>
+            <div class="follow-profile">
+              <div class="follow-container">
+                <img
+                  src="/imgs/SelfPortrait3.jpeg"
+                  class="profile-img"
+                  alt="profile-img"
+                />
+                <div class="follow-details">
+                  <a class="username">Eman Alabsi</a>
+                  <span class="nickname"
+                    >@eman <span id="follows-you"> follows you</span></span
+                  >
+                </div>
+              </div>
+              <button class="follow-btn">follow</button>
+            </div>
+            <div class="follow-profile">
+              <div class="follow-container">
+                <img
+                  src="/imgs/SelfPortrait3.jpeg"
+                  class="profile-img"
+                  alt="profile-img"
+                />
+                <div class="follow-details">
+                  <a class="username">Eman Alabsi</a>
+                  <span class="nickname">@eman </span>
+                </div>
+              </div>
+              <button class="follow-btn">follow</button>
+            </div>
+
+            <a href="" class="show-more">Show more</a>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>
