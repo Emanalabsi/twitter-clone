@@ -26,19 +26,14 @@ function createTweetElement(val, author) {
   profileImg.alt = "profile-img";
   profileImg.className = "profile-img";
   tweetTimeline.append(profileImg);
-
   let tweeterDetails = document.createElement("div");
   tweeterDetails.className = "tweeter-details";
-
   let tweeterInfo = document.createElement("div");
   tweeterInfo.className = "tweeter-info";
-
   let tweeterUsername = document.createElement("a");
   tweeterUsername.className = "tweeter-username";
-
   let tweetAuthor = author;
   tweeterUsername.append(tweetAuthor);
-
   let tweeterNickname = document.createElement("span");
   tweeterNickname.className = "tweeter-nickname";
 
@@ -95,13 +90,9 @@ function createTweetElement(val, author) {
 
   //4th icon
   let uploadAnchor = document.createElement("button");
-
   let uploadIcon = document.createElement("i");
-
   uploadIcon.className = "material-icons-outlined";
-
   let uploadIconText = document.createTextNode("upload");
-
   uploadIcon.append(uploadIconText);
   uploadAnchor.append(uploadIcon);
   tweetIcons.append(uploadAnchor);
@@ -113,16 +104,17 @@ function createTweetElement(val, author) {
 
 function createTweet(text, author) {
   const tweetElement = createTweetElement(text, author);
-
   const likeElement = tweetElement.querySelector(".like-btn");
-  likeElement.addEventListener("click", (e) => {
+  likeElement.addEventListener("click", () => {
     likeElement.classList.toggle("like-effect");
   });
 
   const retweetButton = tweetElement.querySelector(".retweet-btn");
-
-  retweetButton.addEventListener("click", (e) => {
+  retweetButton.addEventListener("click", () => {
     const clonedNode = tweetElement.cloneNode(true);
+    clonedNode.querySelector(".like-btn").addEventListener("click", (e) => {
+      clonedNode.querySelector(".like-btn").classList.toggle("like-effect");
+    });
     retweetButton.classList.toggle("retweet-effect");
     clonedNode.querySelector(".retweet-btn").classList.toggle("retweet-effect");
     tweetsContainer.prepend(clonedNode);
