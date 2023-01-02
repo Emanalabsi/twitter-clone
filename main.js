@@ -1,8 +1,7 @@
 let tweetInput = document.querySelector(".tweet-input");
 let tweetButton = document.querySelector(".seconed-tweet-btn");
-let tweetsFeed = document.querySelector(".tweets-feed");
-let tweets = document.querySelector(".tweets");
-let tweetsContentArray = [];
+let tweetsContainer = document.querySelector(".tweets-container");
+let tweets = [];
 
 tweetButton.addEventListener("click", function () {
   const inputValue = tweetInput.value;
@@ -11,6 +10,7 @@ tweetButton.addEventListener("click", function () {
     return;
   } else {
     createTweet(inputValue, "Eman Alabsi");
+    document.querySelector(".tweet-input").value = "";
   }
 });
 
@@ -111,30 +111,24 @@ function createTweetElement(val, author) {
   return tweetTimeline;
 }
 
-function createTweet(val, author) {
-  const tweetElement = createTweetElement(val, author);
+function createTweet(text, author) {
+  const tweetElement = createTweetElement(text, author);
 
-  console.log(tweetElement);
-
-  // let tweetObj = { author: val };
-  // tweetsContentArray.push(tweetObj);
-  // localStorage.setItem(author, val);
-  // console.log(tweetObj);
-  // console.log(tweetsContentArray);
-}
-
-let retweetButtons = document.querySelectorAll(".retweet-btn");
-for (let i = 0; i < retweetButtons.length; i++) {
-  retweetButtons[i].addEventListener("click", function () {
-    retweetButtons[i].classList.toggle("retweet-effect");
-    let elemnts = document.getElementsByClassName("tweet-content");
-    createTweet(elemnts[i].innerHTML, "Eman Alabsi");
+  const likeElement = tweetElement.querySelector(".like-btn");
+  likeElement.addEventListener("click", (e) => {
+    likeElement.classList.toggle("like-effect");
   });
-}
 
-let likeButtons = document.querySelectorAll(".like-btn");
-for (let i = 0; i < likeButtons.length; i++) {
-  likeButtons[i].addEventListener("click", function () {
-    likeButtons[i].classList.toggle("like-effect");
+  const retweetButton = tweetElement.querySelector(".retweet-btn");
+
+  retweetButton.addEventListener("click", (e) => {
+    const clonedNode = tweetElement.cloneNode(true);
+    retweetButton.classList.toggle("retweet-effect");
+    clonedNode.querySelector(".retweet-btn").classList.toggle("retweet-effect");
+    tweetsContainer.prepend(clonedNode);
+    tweets.unshift({ text, author });
   });
+
+  tweets.unshift({ text, author });
+  tweetsContainer.prepend(tweetElement);
 }
