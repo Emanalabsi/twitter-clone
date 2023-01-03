@@ -123,4 +123,5 @@ function createTweet(text, author) {
 
   tweets.unshift({ text, author });
   tweetsContainer.prepend(tweetElement);
+  localStorage.setItem(author, text);
 }
