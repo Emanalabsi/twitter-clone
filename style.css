@@ -296,6 +296,7 @@ main {
     width: 100%;
     padding: 12px 16px 0px 25px;
     border-top: 1px solid rgb(47, 51, 45);
+    border-bottom: 1px solid rgb(47, 51, 45);
 }
 
 .tweeter-details {
