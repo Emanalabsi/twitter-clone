@@ -22,7 +22,7 @@ function createTweetElement(val, author) {
 
   //img of the profile
   let profileImg = document.createElement("img");
-  profileImg.src = "/imgs/SelfPortrait3.jpeg";
+  profileImg.src = "imgs/SelfPortrait3.jpeg";
   profileImg.alt = "profile-img";
   profileImg.className = "profile-img";
   tweetTimeline.append(profileImg);
