@@ -34,7 +34,6 @@ body {
 header {
     width: 90px;
     padding: 10px;
-
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -43,9 +42,6 @@ header {
     top: 0;
     bottom: 0;
 }
-
-
-
 
 .navigation-links {
     display: flex;
